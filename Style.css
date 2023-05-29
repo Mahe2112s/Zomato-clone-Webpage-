@@ -11,9 +11,11 @@ body{
   align-items: center;
   justify-content: space-around;
   background-color: #fff;
+  height: 50px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 .navbar__brand{
-  width: 100px;
+  width: 60px;
 }
 .navbar_logo{
   width: 100%;
@@ -42,13 +44,20 @@ body{
 }
 .hero__img__container {
   width: 100%;
+  position: relative;
 }
 .hero__image{
+  position: absolute;
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
+  z-index: 3;
+  margin-top: 30px;
 }
+.hero__pattern{
+  position: absolute;
+}
+
 .hero__text{
   margin: 20px 0px;
   font-weight: 800;
@@ -78,6 +87,121 @@ body{
 .food__card__descrption{
   padding: 15px;
 }
+.restaurant__text{
+  color: #1d3557;
+  font-size: 25px;
+}
+
+.restaurant__list__container__row1{
+  display: flex;
+  align-items: baseline;
+}
+.restaurant__list__container__row2{
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.restaurant2,
+.restaurant4 {
+  border-radius: 4px;
+  margin: 0 5px;
+  width: 180px;
+  height: 100px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.restaurant1,
+.restaurant3 {
+  border-radius: 4px;
+  margin: 0 5px;
+  width: 150px;
+  height: 80px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.restaurant__list__container{
+  margin-top: 30px;
+}
+.email__container{
+  margin-top:80px;
+}
+.email__text{
+  font-weight: 800;
+  color: #1d3577;
+}
+.email__list{
+  display: flex;
+  align-items: center;
+  gap:6px;
+  margin-top: 8px;
+}
+.email{
+  border: 1px solid #ff7979;
+  background-color: #fab1a0;
+  border-radius: 3px;
+  padding: 8px;
+}
+.email::placeholder{
+  color: #dfe6e9;
+  font-weight: 200;
+}
+.qoute__container{
+  margin-top: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qoute__img{
+  position: absolute;
+  width: 100%;
+  z-index: -3;
+  background-color: #0a4065;
+  border-radius: 15px;
+}
+.qoute{
+  width: 100%;
+  border-radius: 15px;
+  opacity: 20%;
+}
+.qoute_text{
+  color:#fff;
+  text-align: center;
+  margin: 0 5px;
+}
+.footer__container{
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+    );
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    border-radius: 13px 13px 0 0;
+}
+.footer__container__img{
+  width: 100%;
+  color: #fff;
+  filter: brightness(0) invert(1);
+}
+
+footer > ul {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  list-style-type: none;
+}
+footer>ul>li{
+  margin-top: 10px;
+}
+
+
 
 @media (min-width:768px) {
   .navbar {
@@ -124,7 +248,45 @@ body{
       z-index: -30;
       transform: skewY(-5deg);
   }
+  .restaurant__list__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+  }
+  .restaurant__list__container__row1{
+    justify-content: center;
+  }
+  .restaurant__list__container__row2{
+    justify-content: center;
+  }
+  .restaurant__text{
+    font-weight: 1000;
+    font-size: 30px;
+  }
+  .email__container{
+    display: flex;
+    justify-content: center;
+  }
+  .email{
+    width: 300px;
+  }
+  .qoute{
+    height: 250px;
+  }
+  .qoute_text{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .footer__container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
 
+  }
+  .footer__container__img{
+    width: 300px;
+  }
 @media (min-width:1024px) {
   .container{
     max-width: 70%;
@@ -147,5 +309,30 @@ body{
   .explore__menu__text{
     font-weight: 900;
     font-size: 50px;
+  }
+  .restaurant2,
+  .restaurant4 {
+    border-radius: 4px;
+    margin: 0 5px;
+    width: 250px;
+    height: 230px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  .restaurant1,
+  .restaurant3 {
+    border-radius: 4px;
+    margin: 0 5px;
+    width: 200px;
+    height: 160px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  .restaurant__text{
+    font-size: 45px;
+  }
+  .email__text{
+    font-size: 45px;
+    font-weight: 1000;
   }
 }
