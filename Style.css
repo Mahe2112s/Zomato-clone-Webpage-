@@ -72,6 +72,25 @@ body{
   text-align: center;
   color: #1d3557;
 }
+.food__card{
+  margin-top:15px;
+   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.explore__menu__container_view{
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 800;
+  padding: 15px 0;
+  border-radius: 6px;
+  transition: 10s;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+    );
+}
 
 .food__card__image{
   width: 100%;
@@ -236,7 +255,7 @@ footer>ul>li{
     position: absolute;
     top: 0;
     bottom: 0;
-    padding-bottom: 60px;
+    left: 0;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(
@@ -245,8 +264,11 @@ footer>ul>li{
       #dd2476 51%,
       #ff512f 100%
       );
-      z-index: -30;
+      z-index: -3;
       transform: skewY(-5deg);
+  }
+  .explore__menu__container_view{
+    background: none;
   }
   .restaurant__list__container{
     display: flex;
@@ -309,6 +331,20 @@ footer>ul>li{
   .explore__menu__text{
     font-weight: 900;
     font-size: 50px;
+  }
+  .explore__menu__container_view{
+    text-align: center;
+    background: none;
+    cursor: pointer;
+    transition: width;
+    transition-duration: 6s;
+  }
+
+  .explore__menu__container_view:hover{
+    background: #dfe6e9;
+    color: #dd2476;
+    margin: 50px 100px;
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
   .restaurant2,
   .restaurant4 {
